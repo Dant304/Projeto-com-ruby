@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= nav_bar brand: "Loja", brand_link: root_url do %>
+      <%= menu_group do %>
+      <%= menu_item "Criar novo Produto", produtos_new_path %>
+      <%= menu_item "Criar novo Funcionário", funcionarios_new_path %>
+      <% end %>
+  <% end %>
+    <%= yield %>
+  </body>
+</html>

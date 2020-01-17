@@ -1,0 +1,22 @@
+<%= link_to "Some Page", funcionarios_path %>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th>NOME</th>
+            <th>GÊNERO</th>
+            <th>SALÁRIO</th>
+            <th>IDADE</th>
+            <th colspan="1">
+        </tr>
+        <tr>
+            <% funcionario = Funcionario.order :salario %>
+            <% funcionario.each do |f| %> 
+                <td><%= f.nome %></td>
+                <td><%= f.genero %></td>
+                <td><%= f.salario %></td>
+                <td><%= f.idade %></td>
+                <td><a href="<%= f.id %>/delete">Remover</a></td>
+        </tr>
+            <% end %>
+    </tbody>
+</table>

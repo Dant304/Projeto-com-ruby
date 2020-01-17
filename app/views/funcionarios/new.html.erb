@@ -1,0 +1,14 @@
+<html>
+    <body>
+    <%= form_for Funcionario.new do |form| %> 
+            Nome <input type="text" name="funcionario[nome]"><br/>
+            <select name="funcionario[genero]" id="person_city_id">
+            <option value="Masculino" selected="selected">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            </select>
+            Salário <input type="number" name="funcionario[salario]" step="0.01"><br/>
+            Idade <input type="number" name="funcionario[idade]" step="1"><br/>
+            <button type="submit">Criar</button> 
+         <% end %>
+    </body>
+</html>
